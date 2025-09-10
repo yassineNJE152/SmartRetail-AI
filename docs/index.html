@@ -1,13 +1,98 @@
-<!doctype html><html lang="en"><meta charset="utf-8">
-<title>SmartRetail AI – Demo</title>
-<body style="font-family:Arial;padding:40px">
-  <h1> SmartRetail AI</h1>
-  <p>IoT + AI + Automation for smarter retail.</p>
-  <ul>
-    <li>Real-time inventory (simulated)</li>
-    <li>Stock-out predictions</li>
-    <li>OpenAI assistant</li>
-    <li>RPA workflows</li>
-  </ul>
-  <p><a href="https://github.com/yassineNJE152/SmartRetail-AI" target="_blank">View source on GitHub</a></p>
-</body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SmartRetail AI – Live Demo</title>
+  <meta name="description" content="IoT + AI + Automation for smarter retail." />
+  <style>
+    :root{
+      --bg:#0b1226; --bg2:#0e1a3d; --card:#121d45; --muted:#a7b6ee; --text:#e9efff; --accent:#4b7fff; --line:#24356e;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;background:linear-gradient(180deg,var(--bg),var(--bg2));color:var(--text)}
+    a{color:var(--accent);text-decoration:none}
+    .wrap{max-width:1100px;margin:0 auto;padding:28px}
+    .hero{padding:64px 28px;border-bottom:1px solid var(--line);background:
+      radial-gradient(1200px 600px at 20% -20%, rgba(75,127,255,.18), transparent 50%),
+      radial-gradient(900px 500px at 110% 10%, rgba(75,127,255,.12), transparent 55%)}
+    .title{font-weight:800;font-size:44px;letter-spacing:.2px;margin:0 0 10px;display:flex;gap:12px;align-items:center}
+    .subtitle{color:var(--muted);margin:0 0 22px;font-size:18px;max-width:780px}
+    .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0}
+    .chip{padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.03);font-size:13px;color:#cfe0ff}
+    .cta{display:inline-block;margin-top:22px;padding:12px 16px;border-radius:12px;border:1px solid var(--accent);background:rgba(75,127,255,.12)}
+    .grid{display:grid;gap:18px;margin-top:-24px}
+    @media(min-width:900px){.grid{grid-template-columns:1.1fr .9fr}}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px}
+    .card h2{margin:0 0 10px;font-size:22px}
+    .list{margin:10px 0 0 18px}
+    .kbd{font-family:ui-monospace,SFMono-Regular,Menlo,mono;background:#0a1435;border:1px solid var(--line);padding:2px 6px;border-radius:6px}
+    footer{color:#99a9e8;font-size:13px;padding:24px 28px;border-top:1px solid var(--line);margin-top:28px;text-align:center}
+    .btns{display:flex;gap:10px;flex-wrap:wrap}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;border:1px solid var(--line);background:#0c173a}
+    .btn.primary{border-color:var(--accent);background:rgba(75,127,255,.15)}
+    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:#cfe0ff}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <h1 class="title">🚀 SmartRetail AI</h1>
+      <p class="subtitle">An intelligent assistant that combines <b>IoT</b>, <b>AI</b>, and <b>RPA</b> to optimize inventory, predict stock-outs, and support sales staff with an OpenAI-powered assistant.</p>
+      <div class="btns">
+        <a class="btn primary" href="https://github.com/yassineNJE152/SmartRetail-AI" target="_blank" rel="noopener">View source on GitHub</a>
+        <a class="btn" href="#features">See features</a>
+      </div>
+      <div class="chips">
+        <span class="chip">Spring Boot</span>
+        <span class="chip">Angular</span>
+        <span class="chip">OpenAI API</span>
+        <span class="chip">Docker</span>
+        <span class="chip">RPA</span>
+        <span class="chip">IoT (simulated)</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="grid">
+      <section id="features" class="card">
+        <h2>What it does</h2>
+        <ul class="list">
+          <li>Real-time inventory from simulated IoT sensors</li>
+          <li>Stock-out predictions & automatic reorder suggestions</li>
+          <li>OpenAI assistant for staff & customers</li>
+          <li>RPA workflows for repetitive tasks</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Demo status</h2>
+        <p>This static page showcases the concept for the hackathon. The repository contains the full description and setup steps. A live API/UI can be wired next.</p>
+        <p class="mono">Repo → <a href="https://github.com/yassineNJE152/SmartRetail-AI" target="_blank">yassineNJE152/SmartRetail-AI</a></p>
+      </section>
+    </div>
+
+    <section class="card">
+      <h2>Architecture (high level)</h2>
+      <p>Angular dashboard → Spring Boot API → OpenAI API. IoT data is mocked for the demo.</p>
+      <ul class="list">
+        <li><b>Frontend:</b> Angular (dashboard + chat widget)</li>
+        <li><b>Backend:</b> Spring Boot REST endpoints</li>
+        <li><b>AI:</b> OpenAI API for Q&A & recommendations</li>
+        <li><b>Automation:</b> RPA scripts to trigger supplier orders</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Local run</h2>
+      <p>Example commands once the codebase is added:</p>
+      <p><span class="kbd">mvn spring-boot:run</span> &nbsp; / &nbsp; <span class="kbd">npm start</span></p>
+    </section>
+  </main>
+
+  <footer>
+    © SmartRetail AI — Hackathon demo. Built with love and caffeine.
+  </footer>
+</body>
+</html>
